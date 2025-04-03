@@ -12,6 +12,13 @@ import MaskIcon from "../icons/mask.svg";
 import McpIcon from "../icons/mcp.svg";
 import DragIcon from "../icons/drag.svg";
 import DiscoveryIcon from "../icons/discovery.svg";
+import ShopIcon from "../icons/shop.svg";
+import TgIcon from "../icons/tg.svg";
+import PCIcon from "../icons/pc.svg";
+
+import { SHOP_URL } from "../constant";
+import { BLOG_URL } from "../constant";
+import { VPS_URL } from "../constant";
 
 import Locale from "../locales";
 
@@ -337,12 +344,15 @@ export function SideBar(props: { className?: string }) {
               </Link>
             </div>
             <div className={styles["sidebar-action"]}>
-              <a href={REPO_URL} target="_blank" rel="noopener noreferrer">
-                <IconButton
-                  aria={Locale.Export.MessageFromChatGPT}
-                  icon={<GithubIcon />}
-                  shadow
-                />
+              <a href={SHOP_URL} target="_blank">
+                <IconButton icon={<ShopIcon />} shadow />
+              </a>
+            </div>
+
+
+             <div className={styles["sidebar-action"]}>
+              <a href={BLOG_URL} target="_blank">
+                <IconButton icon={<PCIcon />} shadow />
               </a>
             </div>
           </>
